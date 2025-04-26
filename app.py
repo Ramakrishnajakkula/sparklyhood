@@ -23,9 +23,12 @@ def incident_to_json(incident):
         "reported_at": incident["reported_at"].isoformat() + "Z"
     }
     
+
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "Welcome to the SparklyHood Incident API!"}), 200
+
+
 
 @app.route("/incidents", methods=["GET"])
 def get_incidents():
